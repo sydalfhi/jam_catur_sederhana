@@ -11,8 +11,8 @@ $(document).ready(function () {
     $(".pemain").removeClass("active");
   }
 
-  namaPlayerWhite = namaPlayerWhite ?? "Pemain Putih";
-  namaPlayerblack = namaPlayerblack ?? "Pemain Hitam";
+  namaPlayerWhite = namaPlayerWhite ? namaPlayerWhite : "Pemain Putih";
+  namaPlayerblack = namaPlayerblack ? namaPlayerblack : "Pemain Hitam";
   $("#nama-1").text(namaPlayerWhite);
   $("#nama-2").text(namaPlayerblack);
 

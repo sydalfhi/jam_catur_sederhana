@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
 }
 
 .container {
@@ -22,6 +24,7 @@
     gap: 0;
 
     p {
+      font-weight: 400;
       margin-bottom: 10px;
     }
 
@@ -45,7 +48,7 @@
   color: white !important;
 
   &::after {
-    content: "PLAY";
+    content: "PLAYING";
     margin-top: 30px;
     font-size: 20px;
   }
@@ -64,6 +67,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: rgb(247, 162, 4);
+  font-weight: 500;
 
   button {
     all: unset;

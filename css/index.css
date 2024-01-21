@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
 }
 
 .container {
@@ -23,6 +25,7 @@
 }
 .container #user-1 p,
 .container #user-2 p {
+  font-weight: 400;
   margin-bottom: 10px;
 }
 .container #user-1:hover,
@@ -43,7 +46,7 @@
   color: white !important;
 }
 .active::after {
-  content: "PLAY";
+  content: "PLAYING";
   margin-top: 30px;
   font-size: 20px;
 }
@@ -61,6 +64,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: rgb(247, 162, 4);
+  font-weight: 500;
 }
 .timeManage button {
   all: unset;
