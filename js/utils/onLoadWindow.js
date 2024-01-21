@@ -1,8 +1,8 @@
 export function onLoadWindow() {
-  let namaPlayerWhite = prompt("nama 1");
-  let namaPlayerblack = prompt("nama 2");
+  let namaPlayerWhite = prompt("Nama Pemain Pertama");
+  let namaPlayerblack = prompt("Nama Pemain Kedua");
   let waktumenit = parseInt(
-    prompt("waktu berapa menit anda mau bermain ? (masukan dalam format angka)")
+    prompt("Berapa Menit Anda Mau Bermain ? (! Masukan Angka Saja)")
   );
 
   namaPlayerWhite = namaPlayerWhite ? namaPlayerWhite : "Pemain Pertama";
