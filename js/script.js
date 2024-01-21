@@ -11,6 +11,11 @@ $(document).ready(function () {
     $(".pemain").removeClass("active");
   }
 
+  namaPlayerWhite = namaPlayerWhite ?? "Pemain Putih";
+  namaPlayerblack = namaPlayerblack ?? "Pemain Hitam";
+  $("#nama-1").text(namaPlayerWhite);
+  $("#nama-2").text(namaPlayerblack);
+
   waktumenit = waktumenit ? (waktumenit = waktumenit) : 5;
   let second = waktumenit * 60;
   let TampilWaktu = detikKeWaktu(second);
@@ -72,7 +77,7 @@ $(document).ready(function () {
         clearInterval(blackInterval);
         return alert("waktu player PUTIH berakhir, player HITAM MENANG");
       }
-    }, 10);
+    }, 1000);
   }
   function waktuPemainHitam() {
     blackInterval = setInterval(() => {
@@ -87,7 +92,7 @@ $(document).ready(function () {
         clearInterval(whiteInterval);
         return alert("waktu player HITAM berakhir, player PUTIH MENANG");
       }
-    }, 10);
+    }, 1000);
   }
 
   function detikKeWaktu(detik) {
