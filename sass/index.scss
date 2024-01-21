@@ -4,14 +4,56 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
+  user-select: none;
+}
+
+@media screen and (orientation: portrait) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .timeManage {
+    min-width: 45vw;
+  }
+  .active {
+    background-color: blueviolet !important;
+    color: white !important;
+
+    &::after {
+      content: "BERMAIN";
+      margin-top: 30px;
+      font-size: 20px;
+    }
+  }
+}
+@media screen and (orientation: landscape) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .timeManage {
+    min-width: 100px;
+  }
+  .active {
+    background-color: blueviolet !important;
+    color: white !important;
+
+    &::after {
+      content: "";
+      margin-top: 0px;
+      font-size: 0px;
+    }
+  }
+}
+
+@media screen and (max-width:768px) {
+  .container{
+    max-width: 768px;
+  }
 }
 
 .container {
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  max-width: 768px;
   margin: auto;
 
   #user-1,
@@ -46,21 +88,14 @@
 .active {
   background-color: blueviolet !important;
   color: white !important;
-
-  &::after {
-    content: "BERMAIN";
-    margin-top: 30px;
-    font-size: 20px;
-  }
 }
 
 .timeManage {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -0%);
   z-index: 100;
-  width: 45vw;
   flex-direction: column;
   border-radius: 5px;
   display: flex;
@@ -76,6 +111,6 @@
     text-transform: uppercase;
     border: 1px solid black;
     cursor: pointer;
-    margin: 10px 0;
+    margin: 10px ;
   }
 }
