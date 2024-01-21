@@ -41,7 +41,7 @@
 }
 
 .active {
-  background-color: red !important;
+  background-color: blueviolet !important;
   color: white !important;
 
   &::after {
@@ -59,12 +59,11 @@
   z-index: 100;
   width: 20vw;
   flex-direction: column;
-  padding: 10px;
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(121, 33, 223);
+  background-color: rgb(247, 162, 4);
 
   button {
     all: unset;
