@@ -1,19 +1,18 @@
+// adalah fungsi untuk mengurangi waktu pemain yang sedang aktif
+
 import { detikKeWaktu } from "./convertTime.js";
 import { removeActive } from "./removeActive.js";
 
-
-
 export let whiteInterval;
-export  let blackInterval;
-
+export let blackInterval;
 
 export function decrementTime(second) {
-    let stringTimeWhite;
-    let stringTimeBlack;
-    let timeWhitePlayer = second;
-    let timeBlacklayer = second;
-    let oneSecond = 1000;
-    
+  let stringTimeWhite;
+  let stringTimeBlack;
+  let timeWhitePlayer = second;
+  let timeBlacklayer = second;
+  let oneSecond = 1000;
+
   function waktuPemainPutih() {
     whiteInterval = setInterval(() => {
       --timeWhitePlayer;
@@ -28,7 +27,6 @@ export function decrementTime(second) {
       }
     }, oneSecond);
   }
-
 
   function waktuPemainHitam() {
     blackInterval = setInterval(() => {
@@ -46,6 +44,5 @@ export function decrementTime(second) {
     }, oneSecond);
   }
 
-  return [waktuPemainPutih, waktuPemainHitam ];
-
+  return [waktuPemainPutih, waktuPemainHitam];
 }
