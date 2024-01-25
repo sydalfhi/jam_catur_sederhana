@@ -1,24 +1,19 @@
 import { RunPlayer } from "./utils/changePlayer.js";
 import { detikKeWaktu } from "./utils/convertTime.js";
-import { blackInterval, decrementTime    } from "./utils/decrementTime.js";
+import { blackInterval, decrementTime } from "./utils/decrementTime.js";
 import { onLoadWindow } from "./utils/onLoadWindow.js";
 
-
-$(document).ready(function () {
+$(document).ready(async function () {
   // fungsi on load
-  let [ waktumenit] = onLoadWindow();
-
-  
+  let { waktumenit } = await onLoadWindow();
   // penetapan awal
-  waktumenit = waktumenit ?  waktumenit : 5;
+  waktumenit = waktumenit ? waktumenit : 5;
   let second = waktumenit * 60;
   let TampilWaktu = detikKeWaktu(second);
   $(".waktu").text(TampilWaktu);
 
-
   // import fungsi untuk mengurangi waktu
-  let [waktuPemainPutih, waktuPemainHitam ] = decrementTime(second);
- 
+  let [waktuPemainPutih, waktuPemainHitam] = decrementTime(second);
 
   // fungsi  tombol play di click
   $(".play-button").click(function (e) {
@@ -29,12 +24,8 @@ $(document).ready(function () {
     RunPlayer(waktuPemainPutih, waktuPemainHitam);
   });
 
-
-
   // fungsi button reset click
   $(".reset-button").click(function (e) {
     window.location.reload();
   });
-
-  
 });
